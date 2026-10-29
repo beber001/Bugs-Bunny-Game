@@ -1,0 +1,659 @@
+{
+  "start": {
+    "text": "<h1>Bugs Bunny Great City Escape</h1>",
+    "img" : "/imgs/Bugs_Bunny_Carrot.jpg",
+    "back_sound" : "/sounds/Looney_Tunes_Intro.mp3",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Start Game",
+        "next_state": "intro",
+        "input": "Y"
+      }
+    ]
+  },
+  "intro": {
+    "mp4": "/mp4/Elmer_Wabbit.mp4",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Start Intro",
+        "next_state": "gstart",
+        "input": "Y"
+      }
+    ]
+  },
+  "gstart": {
+    "text": "<h1>Elmer Fudd saw a sign saying it's rabbit season and is hunting Bugs Bunny again. \n Bugs Bunny needs to put his duck season sign up to stop Elmer from hunting him but he left it at home.\n Help Bugs Bunny run to his rabbit hole on the other side of the city. \n <h1>Instructions: Read the prompts and select one of the right answers to move on. \n If you get two back-to-back wrong answers and the game will be over. Look for <i>ITALICIZED</i> words for hints because each correct answer will contain an <i>italicized</i> word or a synonym.</h1>",
+    "img": "/imgs/Bugs_and_Elmer.jpg",
+    "back_sound": "/sounds/bkground.mp3",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Run towards City",
+        "next_state": "Street",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Run towards Forrest",
+        "next_state": "Forrest",
+        "input": "X"
+      }
+    ]
+  },
+  "Street": {
+    "text": "<h1>After a short sprint, Bugs Bunny finds himself on the sidewalk of a busy street.  \n He needs to find a way to get a <i>lift</i> over the traffic or walk his way through <i>traffic</i>.</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Grab a lift from a low hanging construction crane hook",
+        "next_state": "Street to Construction Site",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Carefully, dodge oncoming traffic",
+        "next_state": "Street to Department Store",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Run down the road",
+        "next_state": "Danger Street",
+        "input": "Y"
+      }
+    ]
+  },
+  "Street to Construction Site": {
+    "text": "<h1>Bugs Bunny shinnies up a light pole and jumps on a nearby construction crane hook. Bugs Bunny sits on the hook like it is a hammock and thinks about how thankful he is that rabbits can jump higher than humans. The crane hook starts lowering to the ground at the construction site so the ride is now over.</h1>",
+    "img": "/imgs/Bugs_Hook.png",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Jump off the hook",
+        "next_state": "Construction Site",
+        "input": "Y"
+      }
+    ]
+  },
+  "Street to Department Store": {
+    "text": "<h1>Bugs Bunny reluctantly jumps into oncoming traffic. He quickly maneuvers his way accross the street only stopping for a second on accosion to let a car pass by. He managed to safely get to the other side but before Bugs Bunny can celebrate his new pro Frogger skills, he sees Elmer using his gun to shoot the tires out of the cars and cause a traffic jam. Bugs Bunny runs into a department store to find a place to hide.</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "open department store doors",
+        "next_state": "Department Store",
+        "input": "Y"
+      }
+    ]
+  },
+  "Danger Street": {
+    "text": "<h1>Bugs Bunny does his best blue hedgehog impression but is just too slow just exahusted himself. Elmer walks up and sticks the business end of his gun in Bugs Bunny's face.  The only way for Bugs Bunny to survive this is to <i>grab</i> a ride with a new friend or stop Elmer's <i>gun</i> from firing.</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Grab a handle on the back of a passing semitruck",
+        "next_state": "Street Passed1",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Kick Elmer inbetween the legs",
+        "next_state": "Street Fail",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Tie the gun barrel into a knot",
+        "next_state": "Street Passed2",
+        "input": "Y"
+      }
+    ]
+  },
+  "Street Passed1": {
+    "text": "<h1>How lucky, Bugs Bunny managed to grab onto the back of a semi truck and is now riding it down the street.  Elmer Fudd is hopelessly giving chase on foot but is still lagging behind. Now Bugs Bunny needs to decide if he wants to ride the truck to the construction site or hop off at the department store.</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "ride to construction site",
+        "next_state": "Construction Site",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "jump off at the department store",
+        "next_state": "Department Store",
+        "input": "Y"
+      }
+    ]
+  },
+  "Street Passed2": {
+    "mp4" : "/mp4/Gun_knot.mp4",
+    "text": "<h1>Bugs Bunny effortlessly ties Elmer's gun barrel into a knot. Elmer pulled the trigger and bullet came out the other end into his face. While Elmer is busy picking himself off the ground, Bugs Bunny needs to run into some place to hide. Where should Bugs Bunny hide?</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "the construction site",
+        "next_state": "Construction Site",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "the department store",
+        "next_state": "Department Store",
+        "input": "Y"
+      }
+    ]
+  },
+  "Street Fail": {
+    "text": "<h1>Bugs Bunny kicks Elmer in the groin as hard as he can but the only affect it seems to have on Elmer is to make his face red with anger. Elmer Fudd shoves his gun into Bug Bunny's face and pulls the trigger.</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Game Over",
+        "next_state": "Game Over",
+        "input": "Y"
+      }
+    ]
+  },
+  "Department Store": {
+    "text": "<h1>Bugs Bunny runs through the department store door's and finds himself surrounded by latest fashions for <i>men</i> and <i>women</i>. Before Bugs Bunny could enjoy the beautiful fabrics, Elmer Fudd come barging through the door demanding Bugs Bunny to show himself. Where should Bugs Bunny hide?</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "In the men's department",
+        "next_state": "Department Store to Basketball Stadium",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "In the women's department",
+        "next_state": "Department Store to Theme Park",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "In the ventalation system",
+        "next_state": "Danger Department Store",
+        "input": "Y"
+      }
+    ]
+  },
+  "Department Store to Basketball Stadium": {
+    "text": "<h1>Bugs Bunny quickly runs into the men's department and grabs a basketball jersey on his way in. Bugs Bunny runs to the sports fan mannequins and puts on his jersey. Bugs Bunny stands perfectly still hoping Elmer will not notice him. This planned worked and Elmer Fudd just walked right past him. While Elmer's back was turned Bugs Bunny makes a break for the backdoor.</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "open the back door",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      }
+    ]
+  },
+  "Department Store to Theme Park": {
+    "text": "<h1>Bugs Bunny runs into the women's section and quickly disguises himself as a perfume salesperson while grabbing spray perfume out of display case. \n Bugs Bunny then spots Elmer Fudd still looking for him and runs up to him saying \"Excuse me sir, would you like a free sample of this perfume?\". \n Before Elmer could reject the offer, Bugs Bunny sprays the entire bottle into Elmer's face. \n While is distracted with wiping his face, Bugs Bunny removes his disguise and runs out the nearby emergency fire exit. \n Of coarse, the fire alarm went off letting Elmer know which door Bugs Bunny ran out and Bugs Bunny can hear \"I am going to get you, you crazy wabbit\" in the distance.</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "open the back door",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      }
+    ]
+  },
+  "Danger Department Store": {
+    "text": "<h1>Bugs Bunny grabs climbs up the wall selves and jumps into the ceiling ventalation system. \n Despite Bugs Bunny best efforts to stealthfully move through the vents, everyone in the department store can hear a bang everytime he moves a limb including Elmer Fudd. \n Elmer raises his <i>gun</i> and starts randomly shooting the ventalation system. \n The vent Bugs Bunny was in gives way and falls to the floor. \n When Bugs comes to again, he looks behind him and sees Emler Fudd's face shoving the business end of his gun into Bugs Bunny's face. \n What should Bugs Bunny do to get out of this fallen vent or should he just <i>kiss</i> his cotton tail goodbye?</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "stick a carrot into the gun barrel",
+        "next_state": "Department Passed1",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Kiss Elmer",
+        "next_state": "Department Passed2",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Burst out the top and jump of Elmer's head",
+        "next_state": "Department Store Fail",
+        "input": "Y"
+      }
+    ]
+  },
+  "Department Passed1": {
+    "text": "<h1>Bugs Bunny reaches out and sticks his carrot into Elmer's gun barrel. \n Elmer tries to fire the gun but everything comes out the back end in his face. \n Bugs runs out the other end of the vent and sees two potential doors he can run out. \n Which door should he run through?</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "The backdoor towards the basketball stadium",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "The fire exit towards the theme park",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      }
+    ]
+  },
+  "Department Passed2": {
+    "text": "<h1>Bugs Bunny lunges towards Elmer and gives him a big kiss. \n Elmer curles back in disgust and wipes his lips. \n While Elmer was distracted Bugs Bunny runs out of the other end of the vent and hears Elmer shout <i>The only person who is allowed to kiss me is my wife!!!</i>. \n Bugs sees two potential doors he can run out. \n Which door should he run through?</h1>",
+    "img": "/imgs/Bugs_Kissing_Elmer.png",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "The backdoor towards the basketball stadium",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "The fire exit towards the theme park",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      }
+    ]
+  },
+  "Department Store Fail": {
+    "text": "<h1>Bugs Bunny summons all of his might and hits the top of the vent with his head. \n Unfortanely, the metal did not budge and now Bugs Bunny has a massive bump on top of his head. \n While Bugs Bunny is dealing with his new concussion, Elmer shoves his gun barrel into Bugs Bunny's face and pulls the trigger.</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Game Over",
+        "next_state": "Game Over",
+        "input": "Y"
+      }
+    ]
+  },
+  "Construction Site": {
+    "text": "<h1>Bugs Bunny jumps off the crane hook and checks his surroundings at the construction site of a half finished office building. Bugs sees a <i>cement</i> truck, and a sewer pipe, a person using a rivet machine on an <i>upper</i> floor, and Elmer Fudd being yelled at by a construction worker about entering a construction site without proper protective equipment. Appearently, it is pretty easy to enter into restrictive sites when you are holding a gun. Where should Bugs Bunny hide?</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "In the sewer",
+        "next_state": "Construction Site Danger",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "In the cement truck",
+        "next_state": "Construction Site to Beach",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "On an upper floor",
+        "next_state": "Construction Site to Board Game Store",
+        "input": "Y"
+      }
+    ]
+  },
+  "Construction Site to Beach": {
+    "text": "<h1>Bugs runs into the cab of the cement truck and sees Elmer getting closer to him. Bugs thinks quickly and starts pressing buttons in the cab. The cement truck comes to life and starts pouring cement right where Elmer is standing. While Elmer is stuck, Bugs Bunny decides to drive his new truck to the beach.</h1>",
+    "mp4": "/mp4/Bugs_Bunny_cement.mp4",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "park cement truck in the beach sand",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      }
+    ]
+  },
+  "Construction Site to Board Game Store": {
+    "text": "<h1>Bugs Bunny takes the work elevator to one of the upper floors. He sees that there is no place to hide but a construction worker did leave a rivet machine behind. Bugs looks back at the elevator to see it coming back up and hearing Elmer's laugh getting louder and louder. Bugs has no choice but to act like a rivet machine in order to hide in plain sight. Elmer sees through his terrible disguise and lifts Bugs Bunny by his legs. Bugs says <i>You really know how to work that tool Mack.</i> before kissing him. Elmer mutters something to himself so Bugs Bunny uses that opportunity to grab the real rivet machine and adds a bunch of rivets into Elmer's hard hat. While Elmer was distracted Bugs Bunny sees a board game store off in the distance and decides to try to hide there next.</h1>",
+    "mp4": "/mp4/Bugs_Bunny_rivet.mp4",
+    "back_sound": "",
+    "next_state": [
+      {
+        "type": "button",
+        "text": "Take the elevator down",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      }
+    ]
+  },
+  "Construction Site Danger" : {
+    "text": "<h1>Bugs Bunny jumps down the sewer pipe and starts making his way through what seems like an endless labyrinth of concrete. Bugs eventually arrives at a t-junction and has no idea if he should make a left or right. Before he can decide Elmer appears behind him and aims his gun. There is no way to <i>dodge</i> a bullet in this cramp pipe and nobody is around to <i>help</i> Bugs. How should Bugs Bunny get out of this stinky stituation?<h1>",
+    "img" : "",
+    "back_sound": "",
+    "next_state" : [
+      {
+        "type": "button",
+        "text": "Look for ninja turtles",
+        "next_state" : "Construction Site Fail",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Matrix dodge the bullets",
+        "next_state" : "Construction Site Passed1",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Whistle for the rats to help",
+        "next_state" : "Construction Site Passed2",
+        "input": "Y"
+      }
+    ]
+  },
+  "Construction Site Passed1" : {
+    "text" : "<h1>Bugs Bunny remenbers that one sceen from the matrix and decide to give it a try. Bugs waits for Elmer to pull the trigger and limbo leans right under the bullets. It accually worked and Elmer is now distracted with trying to quickly reload his gun. This gives Bugs Bunny enough of a moment to run down one of the pipes but which one?</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+        "type": "button",
+        "text": "Left towards the beach",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Right towards a board game store",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      }
+    ]
+  },
+  "Construction Site Passed2" : {
+    "text" : "<h1>Bugs Bunny does his best pied piper impression by whistling. Much to Bugs's surprise a wave of rats show up and knock Elmer down. Bugs Bunny uses this opportunity to run out of the sewer but which pipe should he run down?</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+        "type": "button",
+        "text": "Left towards the beach",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      },
+      {
+        "type": "button",
+        "text": "Right towards a board game store",
+        "next_state": "Hair Salon",
+        "input": "Y"
+      }
+    ]
+  },
+  "Construction Site Fail" : {
+    "text" : "<h1>Bugs Bunny looks around to see if he can spot any ninja turtle ready to help those in need. Unfortunately, Bugs Bunny comes up with nothing because that only works in New York sewers. Bugs Bunny gulps loudly and looks back at Elmer just to see the end of a gun barrel. Elmer pulls the trigger.</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+        "type" : "button",
+        "text" : "Game Over",
+        "next_state": "Game Over",
+        "input": "Y"
+      }
+    ]
+  },
+  "Forrest": {
+    "mp4" : "/mp4/gun_mountain.mp4",
+    "text": "<h1>Bugs Bunny runs deeper into the forrest in hopes of losing Elmer but he is unable to out run Elmer. Bugs Bunny finds himself running right into a camp ground and needs to find something to slow Elmer down with. The only things Bugs Bunny sees around him is a picnic <i>basket</i> on a table, a <i>tire</i> swing, and a bee hive. What should Bugs Bunny use?</h1>",
+    "img": "",
+    "back_sound": "",
+    "next_state": [
+      {
+	"type" : "button",
+        "text": "Use the picnic basket",
+        "next_state": "Forrest to Street1",
+        "input": "Y"
+      },
+      {
+	"type" : "button",
+	"text" : "Use the tire swing",
+	"next_state" : "Forrest to Street2",
+	"input" : "Y"
+      },
+      {
+        "type" : "button",
+        "text" : "Use the bee hive",
+	"next_state" : "Forrest Danger",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Forrest to Street1": {
+    "text": "<h1>Bugs Bunny dives over the table and grabs the picnic basket mid dive. Bugs reaches in only to find rasbarry pie. Bugs Bunny turns towards Elmer Fudd and throws that pie like a professonal baseball player right into Elmer's face. Elmer tries to wipe his face quickly but Bugs Bunny runs to the nearby street before he finishes. Bugs Bunny notices Elmer giving chase before he can truely get away.</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+	"type" : "button",
+	"text" : "Run towards the street",
+	"next_state" : "Street",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Forrest to Street2": {
+    "text": "<h1>Bugs Bunny runs over to the tire swing and jumps on it. Bugs Bunny momentum is enough to swing him high into the air and he looks down to see Elmer taking aim. Elmer has clearly forgotten the universal law of what goes up must come down as Bugs rams the tire into Elmer's gut on the down swing. The force knocks Elmer on his back and Bugs Bunny runs towards the nearby street before Elmer gets back up again.</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+	"type" : "button",
+	"text" : "Run towards the street",
+	"next_state" : "Street",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Forrest Danger": {
+    "text": "<h1>Bugs Bunny jumps up the tree and grabs the bee <i>hive</i>. Bugs Bunny can hear the bees getting angrier and angrier while holding the hive. Bugs needs to <i>throw</i> this thing away before the bees decide to attack. How should Bugs Bunny do with the bee hive?</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+	"type" : "button",
+	"text" : "Throw the hive towards Elmer Fudd",
+	"next_state" : "Forrest Passed1",
+	"input" : "Y"
+      },
+      {
+	"type" : "button",
+	"text" : "Kick the hive towards Elmer Fudd",
+	"next_state" : "Forrest Fail",
+	"input" : "Y"
+      },
+      {
+	"type" : "button",
+	"text" : "Roll the hive towards Elmer Fudd",
+	"next_state" : "Forrest Passed2",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Forrest Passed1": {
+    "text": "<h1>Bugs Bunny turns towards Elmer Fudd and throws the hive at him. The bee hive hits Elmer Fudd dead center. Elmer is now covered in honey and is surrounded by angry bees. Since the bees were doing an excellent job at distractive stinging, Bugs Bunny starts running to the nearby street.</h1>",
+    "img": "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+        "type" : "button",
+	"text" : "Arrive at the street",
+	"next_state" : "Street",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Forrest Passed2": {
+    "text": "<h1>Bugs Bunny carefully rolls the bees hive accross the ground like a bowling ball. Elmer Fudd absentmindedly steps on the hive and trips. Elmer is now laying on the ground covered in honey and surrounded by angry bees. Elmer desperately tries to get up while fighting off the stinging bees. Bugs takes this opportunity to run to the nearby street.</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+        "type" : "button",
+	"text" : "Arrive at the street",
+	"next_state" : "Street",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Forrest Fail": {
+    "text": "<h1>Bugs Bunny kicks the hive like a professional soccer player but the hive breaks apart as soon as it hits his foot. Bugs Bunny's foot is now covered in honey and is surrounded by angry bees. While being stung by bees, Bugs Bunny dives into a nearby river to drown the bees. Bugs Bunny was able to get rid of the bees but crawled out of the river already exhausted. Bugs looks up to see Elmer's gun pointed at his face and Elmer pulls the trigger.</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+        "type" : "button",
+	"text" : "Game Over",
+	"next_state" : "Game Over",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Hair Salon": {
+    "text": "<h1>Bugs Bunny looks at his watch and notices that he does not have enough time to lead Elmer on an adventure all over the city so decided to go straight to his rabbit hole. Unfortantely, his rabbit hole is behind a hair salon so needs to decide how to slow down Elmer Fudd one more time. Bugs could use the shaving razor on the table to give Elmer a really close shave. Bugs could grab a bunch of fruit out of the employee lockers and make Elmer a not-so-nice fruit salad. Bugs also stached a bottle of hair tonic on the top shelf for a prank Bugs always wanted to pull on Elmer. How should Bugs ruin Elmer's surprise trip to the \"Hare\" salon?</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+        "type" : "button",
+        "text" : "Close shave time",
+	"next_state" : "Hair Salon1",
+	"input" : "Y"
+      },
+      {
+	"type" : "button",
+	"text" : "Fruit salad time",
+	"next_state" : "Hair Salon2",
+	"input" : "Y"
+      },
+      {
+	"type" : "button",
+	"text" : "Hair tonic time",
+	"next_state" : "Hair Salon3",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Hair Salon1": {
+    "mp4" : "/mp4/Elmer_shave.mp4",
+    "text": "<h1>Bugs Bunny grabs Elmer off the street and sits him down in one of the chairs. Before Elmer can say anything, Bugs Bunny covers his face with shaving cream. Bugs Bunny removes the shaving cream by hacking away at Elmer's face with the shaving razor leaving a lot of cuts on Elmer's face. Elmer gets mad and grabs his gun. Bugs Bunny is already running out the backdoor before Elmer turns towards him.</h1>",
+    "back_sound" : "",
+    "next_state" : [
+      {
+	"type" : "button",
+	"text" : "Enter Bugs Bunny's home",
+	"next_state" : "Rabbit Hole",
+	"input" : "Y"
+      }
+    ]
+  }, 
+  "Hair Salon2": {
+    "mp4" : "/mp4/Elmer_fruit.mp4",
+    "text": "<h1>Bugs Bunny throws Elmer into a chair and give Elmer a scalp massage. The now oblivious Elmer does not realise Bugs Bunny created a fruit salad on top of his head until after he looks in a mirror. The now mad Elmer grabs a razor blade and chases Bugs Bunny out the backdoor.</h1>",
+    "back_sound" : "",
+    "next_state" : [
+      {
+	"type" : "button",
+	"text" : "Enter Bugs Bunny's home",
+	"next_state" : "Rabbit Hole",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Hair Salon3": {
+    "mp4" : "/mp4/Elmer_flower.mp4",
+    "text" : "<h1>Bugs Bunny grabs Elmer Fudd and spins him around in a rotating door. Bugs Bunny lays the dizzy Elmer on a chair and gets to work quickly on his prank. By using both hair tonic anf fertalizer, Bugs was able to grow a bed of flowers on Elmer's bald head. Elmer hates his new look and grabs a fire axe to chase Bugs Bunny out the backdoor with.</h1>",
+    "back_sound" : "",
+    "next_state" : [
+      {
+	"type" : "button",
+	"text" : "Enter Bugs Bunny's home",
+	"next_state" : "Rabbit Hole",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Rabbit Hole": {
+    "text" : "<h1>Bugs Bunny dives into his rabbit hole and grabs his duck hunting season sign. Bugs hangs the sign on a nearby tree immediately. The only reason why bugs does not always have this sign up is that Daffy Duck seems to instictually know when one of these signs go up and destroyes them within the hour. Speaking of which Bugs Bunny can already hear Daffy Duck making his way over off in the distance but Bugs does not have time to deal with him now. Bugs runs back into his hole and awaits for Elmer so Bugs can tell him the good news about duck hunting season.</h1>",
+    "img" : "",
+    "back_sound" : "",
+    "next_state" : [
+      {
+	"type" : "button",
+	"text" : "Elmer arrives",
+	"next_state" : "Duck Season",
+	"input" : "Y"
+      }
+    ]
+  },
+  "Duck Season": {
+    "mp4" : "/mp4/Rabbit_Season.mp4",
+    "text" : "<h1>Bugs Bunny has a heated argument with Daffy Duck infront of Elmer about whether it is duck season or rabbit season. In the end, Elmer ends up losing the argument dispite not participating as Bugs Bunny and Daffy Duck work together to chase Elmer away.</h1>",
+    "back_sound" : "",
+    "next_state" : [
+      {
+	"type" : "button",
+	"text" : "Win Game",
+	"next_state" : "Game Win",
+	"input" : "Y"
+      }
+    ]
+  },
+ "Game Win": {
+   "text" : "<h1>Bugs Bunny Wins!!! \nThanks For Playing! \n Would you like to play again and see the other choices? </h1>",
+   "img" : "",
+   "back_sound" : "",
+   "next_state" : [
+     {
+       "type" : "button",
+       "text" : "PLAY AGAIN!",
+       "next_state" : "start",
+       "input": "Y"
+      }
+    ]
+  },
+  "Game Over": {
+    "text": "<h1>Game Over \n Bugs Bunny Got Shot!</h1>",
+    "img": "/imgs/bugs_bunny_game_over.jpg",
+    "back_sound": "",
+    "next_state": [
+      {
+        "text": "Start Over",
+        "next_state": "intro",
+        "input": "Y"
+      }
+    ]
+  }
+}
